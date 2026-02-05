@@ -103,7 +103,7 @@
         if (userImg) {
             ctx.save();
             ctx.beginPath();
-            ctx.arc(878, 882, 115, 0, Math.PI * 2, true); // Position for the white circle area
+            ctx.arc(936, 1241, 115, 0, Math.PI * 2, true); // Position for the white circle area
             ctx.closePath();
             ctx.clip();
 
@@ -117,18 +117,17 @@
                 drawWidth = 230;
                 drawHeight = 230 / aspect;
             }
-            ctx.drawImage(userImg, 878 - drawWidth/2, 882 - drawHeight/2, drawWidth, drawHeight);
+            ctx.drawImage(userImg, 936 - drawWidth/2, 1241 - drawHeight/2, drawWidth, drawHeight);
             ctx.restore();
         }
 
         // 3. Draw Text
         const text = userNameInput.value || "તમારું નામ, હોદ્દો, સરનામું";
-        ctx.font = "700 40px 'Hind Vadodara'"; // Increased size for high-res canvas
+        ctx.font = "700 80px 'Hind Vadodara'"; // Increased size for high-res canvas
         ctx.fillStyle = "white";
         ctx.textAlign = "left";
         // Coordinates for the dark banner at the bottom
-        ctx.fillText(text, 140, 1000); 
-        ctx.fillText(text, 140, 1250); 
+        ctx.fillText(text, 140, 1238); 
     }
 
     // Handle Image Upload
