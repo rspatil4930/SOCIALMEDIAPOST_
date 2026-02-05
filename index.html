@@ -103,7 +103,7 @@
         if (userImg) {
             ctx.save();
             ctx.beginPath();
-            ctx.arc(940, 1241, 115, 0, Math.PI * 2, true); // Position for the white circle area
+            ctx.arc(938, 1241, 115, 0, Math.PI * 2, true); // Position for the white circle area
             ctx.closePath();
             ctx.clip();
 
@@ -117,7 +117,7 @@
                 drawWidth = 230;
                 drawHeight = 230 / aspect;
             }
-            ctx.drawImage(userImg, 940 - drawWidth/2, 1241 - drawHeight/2, drawWidth, drawHeight);
+            ctx.drawImage(userImg, 938 - drawWidth/2, 1241 - drawHeight/2, drawWidth, drawHeight);
             ctx.restore();
         }
 
@@ -155,6 +155,7 @@
 
 </body>
 </html>
+
 
 
 
