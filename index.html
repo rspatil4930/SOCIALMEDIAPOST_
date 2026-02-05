@@ -121,14 +121,27 @@
             ctx.restore();
         }
 
-        // 3. Draw Text
-        const text = userNameInput.value || "તમારું નામ, હોદ્દો, સરનામું";
-        ctx.font = "700 40px 'Hind Vadodara'"; // Increased size for high-res canvas
-        ctx.fillStyle = "white";
-        ctx.textAlign = "left";
-        // Coordinates for the dark banner at the bottom
-        ctx.fillText(text, 140, 1250); 
-    }
+       // 3. Draw Text
+const fullText = userNameInput.value || "તમારું નામ, હોદ્દો, સરનામું";
+
+ctx.font = "700 40px 'Hind Vadodara'";
+ctx.fillStyle = "white";
+ctx.textAlign = "left";
+
+// લખાણને અલ્પવિરામ (comma) થી અલગ કરીને એરે બનાવવો
+const parts = fullText.split(',');
+
+// પહેલી લાઈન: નામ (Index 0)
+const line1 = parts[0] || "";
+ctx.fillText(line1, 140, 860); // Y-coordinate થોડો ઉપર લીધો છે (885 થી 860)
+
+// બીજી લાઈન: હોદ્દો અને સરનામું (બાકીનું લખાણ)
+// જો અલ્પવિરામ હોય તો તેને જોડીને બીજી લાઈન બનાવવી
+const line2 = parts.slice(1).join(',').trim(); 
+if (line2) {
+    ctx.font = "500 30px 'Hind Vadodara'"; // બીજી લાઈન માટે થોડી નાની ફોન્ટ સાઈઝ
+    ctx.fillText(line2, 140, 910); // Y-coordinate નીચે રાખ્યો છે
+}
 
     // Handle Image Upload
     imageLoader.addEventListener('change', (e) => {
@@ -155,6 +168,7 @@
 
 </body>
 </html>
+
 
 
 
