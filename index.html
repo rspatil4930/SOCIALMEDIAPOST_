@@ -148,14 +148,9 @@ function draw() {
     ctx.fillStyle = "#ffffff";
     ctx.textAlign = "left";
 
-    // Name
+    // Name + Designation + Address
     ctx.font = "700 80px 'Hind Vadodara'";
     ctx.fillText(parts[0] || "", 140, 1230);
-
-    // Designation + Address
-    if (parts.length > 1) {
-        ctx.font = "500 30px 'Hind Vadodara'";
-        ctx.fillText(parts.slice(1).join(",").trim(), 140, 910);
     }
 }
 
@@ -189,4 +184,5 @@ downloadBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
