@@ -103,7 +103,7 @@
         if (userImg) {
             ctx.save();
             ctx.beginPath();
-            ctx.arc(936, 1230, 115, 0, Math.PI * 2, true); // Position for the white circle area
+            ctx.arc(936, 1229, 115, 0, Math.PI * 2, true); // Position for the white circle area
             ctx.closePath();
             ctx.clip();
 
@@ -117,7 +117,7 @@
                 drawWidth = 230;
                 drawHeight = 230 / aspect;
             }
-            ctx.drawImage(userImg, 936 - drawWidth/2, 1230 - drawHeight/2, drawWidth, drawHeight);
+            ctx.drawImage(userImg, 936 - drawWidth/2, 1229 - drawHeight/2, drawWidth, drawHeight);
             ctx.restore();
         }
 
@@ -127,7 +127,7 @@
         ctx.fillStyle = "white";
         ctx.textAlign = "left";
         // Coordinates for the dark banner at the bottom
-        ctx.fillText(text, 140, 1240); 
+        ctx.fillText(text, 138, 1240); 
     }
 
     // Handle Image Upload
@@ -155,6 +155,7 @@
 
 </body>
 </html>
+
 
 
 
